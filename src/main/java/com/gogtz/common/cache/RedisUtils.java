@@ -1,14 +1,15 @@
+
 /**
  * Description: Redis缓存工具类
- * <p>需要配置文件支持：properties/redis.properties</p>
- * <p>最大分配的对象数：redis.pool.maxActive</p>
- * <p>最大能够保持状态的对象数：redis.pool.maxIdle</p>
- * <p>当池内没有对象时，最大等待时间：redis.pool.maxWait</p>
- * <p>当调用borrow Object方法时，是否进行有效检查：redis.pool.testOnBorrow</p>
- * <p>当调用return Object方法时，是否进行有效检查：redis.pool.testOnReturn</p>
- * <p>密码：redis.pool.password</p>
- * <p>redis服务器Ip地址：redis.ip</p>
- * <p>redis服务器端口：redis.port</p>
+ * <p>需要配置文件支持：properties/redis.properties</li>
+ * <p>最大分配的对象数：redis.pool.maxActive</li>
+ * <p>最大能够保持状态的对象数：redis.pool.maxIdle</li>
+ * <p>当池内没有对象时，最大等待时间：redis.pool.maxWait</li>
+ * <p>当调用borrow Object方法时，是否进行有效检查：redis.pool.testOnBorrow</li>
+ * <p>当调用return Object方法时，是否进行有效检查：redis.pool.testOnReturn</li>
+ * <p>密码：redis.pool.password</li>
+ * <p>redis服务器Ip地址：redis.ip</li>
+ * <p>redis服务器端口：redis.port</li>
  * Copyright: Copyright (Gogtz Corporation)2017
  * Company: Gogtz Corporation
  *
@@ -25,6 +26,24 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
+/**
+ * <h1>Redis缓存工具类</h1>
+ * <ol><strong>
+ * <li>需要配置文件支持：properties/redis.properties</li> 
+ * <li>最大分配的对象数：redis.pool.maxActive</li> 
+ * <li>最大能够保持状态的对象数：redis.pool.maxIdle</li> 
+ * <li>当池内没有对象时，最大等待时间：redis.pool.maxWait</li> 
+ * <li>当调用borrow Object方法时，是否进行有效检查：redis.pool.testOnBorrow</li> 
+ * <li>当调用return Object方法时，是否进行有效检查：redis.pool.testOnReturn</li> 
+ * <li>密码：redis.pool.password</li> 
+ * <li>redis服务器Ip地址：redis.ip</li> 
+ * <li>redis服务器端口：redis.port</li>
+ * </strong>
+ * </ol>
+ *
+ * @author: t
+ * @version: 1.0
+ */
 public class RedisUtils {
     private static JedisPool pool = null;
 
@@ -56,6 +75,11 @@ public class RedisUtils {
         return pool;
     }
 
+    /**
+     * 取得链接
+     *
+     * @return
+     */
     public static JedisPool getConnection() {
         // ②如果poolThreadLocal没有本线程对应的JedisPool创建一个新的JedisPool，将其保存到线程本地变量中。
         if (poolThreadLocal.get() == null) {
@@ -70,8 +94,8 @@ public class RedisUtils {
     /**
      * 返还到连接池
      *
-     * @param pool
-     * @param redis
+     * @param pool  pool
+     * @param redis redis
      */
     public static void returnResource(JedisPool pool, Jedis redis) {
         if (redis != null) {
@@ -82,7 +106,7 @@ public class RedisUtils {
     /**
      * 累加值
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static Long incr(String key) {
@@ -109,7 +133,7 @@ public class RedisUtils {
     /**
      * 获取数据
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static String get(String key) {
@@ -136,7 +160,7 @@ public class RedisUtils {
     /**
      * 获取数据
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static byte[] get(byte[] key) {
@@ -163,7 +187,7 @@ public class RedisUtils {
     /**
      * 删除数据
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static Long del(String key) {
@@ -190,7 +214,7 @@ public class RedisUtils {
     /**
      * 删除数据
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static Long del(byte[] key) {
@@ -217,7 +241,7 @@ public class RedisUtils {
     /**
      * 判断是否存在
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static Boolean exists(String key) {
@@ -244,9 +268,9 @@ public class RedisUtils {
     /**
      * 赋值数据
      *
-     * @param key
-     * @param value
-     * @param expireSeconds(过期时间，秒)
+     * @param key           key
+     * @param value         value
+     * @param expireSeconds (过期时间，秒)
      * @return value
      */
     public static Long set(String key, String value, int expireSeconds) {
@@ -273,8 +297,8 @@ public class RedisUtils {
     /**
      * 设置过期时间
      *
-     * @param key
-     * @param expireSeconds(过期时间，秒)
+     * @param key           key
+     * @param expireSeconds (过期时间，秒)
      * @return value
      */
     public static Long expire(String key, int expireSeconds) {
@@ -300,7 +324,7 @@ public class RedisUtils {
     /**
      * 赋值数据
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static String set(String key, String value) {
@@ -326,7 +350,7 @@ public class RedisUtils {
     /**
      * 赋值数据
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static Long sadd(String key, String value) {
@@ -352,7 +376,7 @@ public class RedisUtils {
     /**
      * 判断set中是否有值
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static Boolean sismember(String key, String member) {
@@ -378,8 +402,8 @@ public class RedisUtils {
     /**
      * redis链表左侧头部压栈
      *
-     * @param key
-     * @param values
+     * @param key    key
+     * @param values values
      * @return
      * @author renxingchen
      */
@@ -405,9 +429,9 @@ public class RedisUtils {
     /**
      * redis链表右侧尾部出栈，入临时队列，如果没有值则阻塞
      *
-     * @param source
-     * @param destination
-     * @param timeout
+     * @param source      source
+     * @param destination destination
+     * @param timeout     timeout
      * @return
      * @author renxingchen
      */
@@ -433,7 +457,7 @@ public class RedisUtils {
     /**
      * redis链表右侧尾部出栈
      *
-     * @param key
+     * @param key key
      * @return
      * @author renxingchen
      */
@@ -459,9 +483,9 @@ public class RedisUtils {
     /**
      * 移除特定元素
      *
-     * @param key
-     * @param count
-     * @param value
+     * @param key   key
+     * @param count count
+     * @param value value
      * @return
      * @author renxingchen
      */
@@ -487,7 +511,7 @@ public class RedisUtils {
     /**
      * 返回列表长度
      *
-     * @param key
+     * @param key key
      * @return
      * @author renxingchen
      */

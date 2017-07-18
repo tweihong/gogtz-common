@@ -1456,7 +1456,7 @@ public class StringUtil {
      * all occurrences of the <code>oldSubs</code> strings replaced with
      * the corresponding <code>newSubs</code> strings, or
      * <code>null</code> if the original string, the
-     * <code>oldSubs</code> array, or the <code>newSubs</code is
+     * <code>oldSubs</code> array, or the <code>newSubs</code> is
      * <code>null</code>
      */
     public static String replace(String s, String[] oldSubs, String[] newSubs, boolean exactMatch) {
@@ -1563,7 +1563,7 @@ public class StringUtil {
      * occurrences of the <code>oldSubs</code> strings replaced with the
      * corresponding <code>newSubs</code> strings, or <code>null</code>
      * if the original string, the <code>oldSubs</code> array, or the
-     * <code>newSubs</code is <code>null</code>
+     * <code>newSubs</code> is <code>null</code>
      */
     public static String replaceFirst(String s, String[] oldSubs, String[] newSubs) {
 
@@ -1666,7 +1666,7 @@ public class StringUtil {
      * occurrences of the <code>oldSubs</code> strings replaced with the
      * corresponding <code>newSubs</code> strings, or <code>null</code>
      * if the original string, the <code>oldSubs</code> array, or the
-     * <code>newSubs</code is <code>null</code>
+     * <code>newSubs</code> is <code>null</code>
      */
     public static String replaceLast(String s, String[] oldSubs, String[] newSubs) {
 

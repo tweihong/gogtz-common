@@ -1,5 +1,10 @@
 package com.gogtz.common.date;
 
+/**
+ * 日期类型枚举类
+ *
+ * @author t
+ */
 public enum EnumDateStyle {
     MM_DD("MM-dd"),
     YYYY_MM("yyyy-MM"),

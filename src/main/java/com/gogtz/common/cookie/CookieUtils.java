@@ -17,6 +17,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Cookie工具类
+ *
+ * @author: t
+ * @version: 1.0
+ */
 public class CookieUtils {
     /**
      * 保存cookie

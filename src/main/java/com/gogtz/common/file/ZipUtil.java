@@ -6,6 +6,11 @@ import java.io.*;
 import java.util.Enumeration;
 import java.util.zip.*;
 
+/**
+ * Zip文件工具类
+ *
+ * @author t
+ */
 public class ZipUtil {
 
     /**
@@ -205,8 +210,8 @@ public class ZipUtil {
     public static void main(String[] args) {
         String zipPath = "D:\\PROJECT\\jinrong\\workspace\\zxpt\\zxpt-admin\\target\\zxpt-admin-1.0-SNAPSHOT\\zxdata\\uploadFiles\\attachments\\fd8964c2-ff7e-4507-bcd9-c0cb8762a73f\\zip";
         String dir = "D:\\PROJECT\\jinrong\\workspace\\zxpt\\zxpt-admin\\target\\zxpt-admin-1.0-SNAPSHOT\\zxdata\\uploadFiles\\attachments\\fd8964c2-ff7e-4507-bcd9-c0cb8762a73f\\image";
-//        String dir = getSystemFilePath("D:/PROJECT/jinrong/workspace/zxpt/zxpt-admin/target/zxpt-admin-1.0-SNAPSHOT/zxdata/uploadFiles/attachments/fd8964c2-ff7e-4507-bcd9-c0cb8762a73f/image");
-//        String zipPath = getSystemFilePath("D:/PROJECT/jinrong/workspace/zxpt/zxpt-admin/target/zxpt-admin-1.0-SNAPSHOT/zxdata/uploadFiles/attachments/fd8964c2-ff7e-4507-bcd9-c0cb8762a73f/zip");
+        //        String dir = getSystemFilePath("D:/PROJECT/jinrong/workspace/zxpt/zxpt-admin/target/zxpt-admin-1.0-SNAPSHOT/zxdata/uploadFiles/attachments/fd8964c2-ff7e-4507-bcd9-c0cb8762a73f/image");
+        //        String zipPath = getSystemFilePath("D:/PROJECT/jinrong/workspace/zxpt/zxpt-admin/target/zxpt-admin-1.0-SNAPSHOT/zxdata/uploadFiles/attachments/fd8964c2-ff7e-4507-bcd9-c0cb8762a73f/zip");
 
         String zipFileName = "图片.zip";//amr
         try {
@@ -215,12 +220,12 @@ public class ZipUtil {
             e.printStackTrace();
         }
 
-//        String zipFilePath = "D:\\ziptest\\zipPath\\test.zip";
-//        String unzipFilePath = "D:\\ziptest\\zipPath";
-//        try {
-//            unzip(zipFilePath, unzipFilePath, true);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        //        String zipFilePath = "D:\\ziptest\\zipPath\\test.zip";
+        //        String unzipFilePath = "D:\\ziptest\\zipPath";
+        //        try {
+        //            unzip(zipFilePath, unzipFilePath, true);
+        //        } catch (Exception e) {
+        //            e.printStackTrace();
+        //        }
     }
 }

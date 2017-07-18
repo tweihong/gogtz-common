@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 文件读取器
  *
- * @author Looly
+ * @author t
  */
 public class FileReader extends FileWrapper {
 

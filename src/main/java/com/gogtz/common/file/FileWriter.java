@@ -9,7 +9,7 @@ import java.util.Collection;
 /**
  * 文件写入器
  *
- * @author Looly
+ * @author t
  */
 public class FileWriter extends FileWrapper {
     /**

@@ -12,7 +12,6 @@
 package com.gogtz.common.ajax;
 
 import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
@@ -20,6 +19,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * <p><strong>Ajax用的工具类</strong></p>
+ * <ol><li> renderData：将数据输出到客户端</li>
+ * <li> parseArray：将字符串转换为JSONArray</li></ol>
+ *
+ * @author t
+ * @Time 2017年7月18日11:26:31
+ */
 @Slf4j
 public class AjaxUtils {
 

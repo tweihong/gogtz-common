@@ -36,7 +36,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 输出Excel
+ * 利用poi导出excel
+ *
+ * @author: t
+ * @version: 1.0
  */
 public class ExportExcel<T> implements Serializable {
 

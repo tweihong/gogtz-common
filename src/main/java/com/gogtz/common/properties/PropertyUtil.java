@@ -81,7 +81,6 @@ public class PropertyUtil {
      * 系统资源文件
      *
      * @return
-     * @throws IOException
      */
     public static String getJDBCPropertiesValue(String key) {
         Properties properties = getJDBCProperties();
@@ -92,7 +91,6 @@ public class PropertyUtil {
      * 消息资源文件
      *
      * @return
-     * @throws IOException
      */
     public static Properties getMessageResourcesProperties() {
         try {
@@ -107,7 +105,6 @@ public class PropertyUtil {
      * 消息资源文件
      *
      * @return
-     * @throws IOException
      */
     public static Properties getSystemResourcesProperties() {
         try {
@@ -123,7 +120,6 @@ public class PropertyUtil {
      * 服务资源文件
      *
      * @return
-     * @throws IOException
      */
     public static String getSystemResourcesPropertieValue(String key) {
         Properties properties = getSystemResourcesProperties();
@@ -145,7 +141,6 @@ public class PropertyUtil {
      * Wx
      *
      * @return
-     * @throws IOException
      */
     public static Properties getWxResourcesProperties() {
         try {
@@ -160,7 +155,6 @@ public class PropertyUtil {
      * Wx
      *
      * @return
-     * @throws IOException
      */
     public static String getWxResourcesPropertieValue(String key) {
         Properties properties = getWxResourcesProperties();
@@ -172,7 +166,6 @@ public class PropertyUtil {
      * 取得redis文件
      *
      * @return
-     * @throws IOException
      */
     public static Properties getRedisResourcesProperties() {
         try {
@@ -187,7 +180,6 @@ public class PropertyUtil {
      * 取得redis文件的属性值
      *
      * @return
-     * @throws IOException
      */
     public static String getRedisValue(String key) {
         Properties properties = getRedisResourcesProperties();

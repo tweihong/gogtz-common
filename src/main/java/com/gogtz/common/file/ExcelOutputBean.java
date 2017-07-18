@@ -6,6 +6,8 @@ import java.util.List;
 
 /**
  * 输出Excel用的bean，可以带下拉列表
+ *
+ * @author t
  */
 @Data
 public class ExcelOutputBean {

@@ -3,7 +3,7 @@ package com.gogtz.common.file;
 /**
  * Stream进度条
  *
- * @author Looly
+ * @author t
  */
 public interface StreamProgress {
 

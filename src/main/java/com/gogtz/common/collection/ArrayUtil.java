@@ -9,6 +9,12 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Map;
 
+/**
+ * <h1>数组工具类</h1>
+ *
+ * @author t
+ * @Time 2017-7-17 15:02:53
+ */
 public class ArrayUtil {
 
     /**

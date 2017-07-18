@@ -17,6 +17,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+/**
+ * 时间共通类
+ *
+ * @author: t
+ * @version: 1.0
+ */
 public class DateUtils {
 
     /**

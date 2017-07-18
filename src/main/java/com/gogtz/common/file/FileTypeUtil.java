@@ -7,7 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 文件类型判断工具类
  *
- * @author Looly
+ * @author t
  */
 public final class FileTypeUtil {
 

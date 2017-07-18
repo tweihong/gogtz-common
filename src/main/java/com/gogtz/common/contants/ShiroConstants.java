@@ -11,6 +11,12 @@
  */
 package com.gogtz.common.contants;
 
+/**
+ * shiro常量文件
+ *
+ * @author: t
+ * @version: 1.0
+ */
 public class ShiroConstants {
 
     /**

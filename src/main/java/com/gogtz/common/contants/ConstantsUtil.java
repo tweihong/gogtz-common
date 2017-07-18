@@ -11,6 +11,12 @@
  */
 package com.gogtz.common.contants;
 
+/**
+ * 共通常量文件
+ *
+ * @author: t
+ * @version: 1.0
+ */
 public class ConstantsUtil {
     /**
      * 用户信息

@@ -14,13 +14,20 @@ package com.gogtz.common.cache;
 
 import java.util.HashMap;
 
+/**
+ * <h1>缓存工具类</h1>
+ * <p>服务器临时缓存，重启后丢失，不支持集群</p>
+ *
+ * @author: t
+ * @version: 1.0
+ */
 public class CacheUtil {
     private static HashMap<String, Object> cache;
 
     /**
      * 从缓存中取得数据
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static Object get(String key) {
@@ -33,7 +40,7 @@ public class CacheUtil {
     /**
      * 从缓存中取得String类型的数据
      *
-     * @param key
+     * @param key key
      * @return
      */
     public static String getString(String key) {
@@ -47,8 +54,8 @@ public class CacheUtil {
     /**
      * 添加缓存
      *
-     * @param key
-     * @param value
+     * @param key   key
+     * @param value 值
      */
     public static void put(String key, Object value) {
         if (cache == null) {
@@ -60,7 +67,7 @@ public class CacheUtil {
     /**
      * 从缓存中移除内容
      *
-     * @param key
+     * @param key key
      */
     public static void remove(String key) {
         if (cache == null) {

@@ -32,6 +32,8 @@ import java.util.jar.JarFile;
 
 /**
  * 文件工具类
+ *
+ * @author t
  */
 @Slf4j
 public class FileUtils {
@@ -1112,19 +1114,12 @@ public class FileUtils {
 
     /**
      * 修复路径<br>
-     * <p>
      * <ol>
-     * <p>
      * <li>1. 统一用 /</li>
-     * <p>
      * <li>2. 多个 / 转换为一个 /</li>
-     * <p>
      * <li>3. 去除两边空格</li>
-     * <p>
      * <li>4. .. 和 . 转换为绝对路径</li>
-     * <p>
      * <li>5. 去掉前缀，例如file:</li>
-     * <p>
      * </ol>
      *
      * @param path 原路径

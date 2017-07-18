@@ -13,6 +13,11 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * word工具类
+ *
+ * @author t
+ */
 public class WordPOI {
 
     // 返回Docx中需要替换的特殊字符，没有重复项

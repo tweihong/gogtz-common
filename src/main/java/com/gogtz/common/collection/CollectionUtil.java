@@ -24,6 +24,12 @@ import java.util.Stack;
 import java.util.TreeSet;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+/**
+ * 集合相关工具类，包括数组
+ *
+ * @author t
+ * @Time 2017-7-17 15:02:53
+ */
 public class CollectionUtil {
     private CollectionUtil() {
     }

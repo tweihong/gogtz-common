@@ -37,6 +37,12 @@ import java.util.HashMap;
  */
 public class WordToHtmlUtils {
 
+    /**
+     * Word 转换成 Html
+     *
+     * @param wordFilePath Word文件路径
+     * @return html代码
+     */
     public static String wordToHtml(String wordFilePath) {
         ByteArrayOutputStream outStream = null;
         String content = null;

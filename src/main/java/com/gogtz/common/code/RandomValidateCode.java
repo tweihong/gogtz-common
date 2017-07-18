@@ -14,7 +14,7 @@ import java.awt.image.BufferedImage;
 import java.util.Random;
 
 /**
- * 生成随机数的工具类
+ * <h1>生成随机数的工具类</h1>
  *
  * @author t
  * @Time 2017-7-17 15:02:53
@@ -39,20 +39,28 @@ public class RandomValidateCode {
 
     /**
      * 构造函数
+     *
+     * @param cookieId cookieId
      */
     public RandomValidateCode(String cookieId) {
         this.cookieId = cookieId;
     }
 
-    /*
+    /**
      * 获得字体
+     *
+     * @return 字体(Fixedsys)
      */
     private Font getFont() {
         return new Font("Fixedsys", Font.CENTER_BASELINE, 30);
     }
 
-    /*
+    /**
      * 获得颜色
+     *
+     * @param fc fc
+     * @param bc bc
+     * @return 返回颜色
      */
     private Color getRandColor(int fc, int bc) {
         if (fc > 255)
@@ -67,6 +75,10 @@ public class RandomValidateCode {
 
     /**
      * 生成随机图片
+     *
+     * @param request  request
+     * @param response response
+     * @param pre      前缀
      */
     public void getRandcode(HttpServletRequest request, HttpServletResponse response, String pre) {
         response.setContentType("image/jpeg");// 设置相应类型,告诉浏览器输出的内容为图片
@@ -110,8 +122,13 @@ public class RandomValidateCode {
         }
     }
 
-    /*
+    /**
      * 绘制字符串
+     *
+     * @param g            图形
+     * @param randomString 随机数
+     * @param i            i
+     * @return 返回随机数
      */
     private String drowString(Graphics g, String randomString, int i) {
         g.setFont(getFont());
@@ -123,8 +140,10 @@ public class RandomValidateCode {
         return randomString;
     }
 
-    /*
+    /**
      * 绘制干扰线
+     *
+     * @param g g
      */
     private void drowLine(Graphics g) {
         int x = random.nextInt(width);
@@ -134,8 +153,11 @@ public class RandomValidateCode {
         g.drawLine(x, y, x + xl, y + yl);
     }
 
-    /*
+    /**
      * 获取随机的字符
+     *
+     * @param num num
+     * @return
      */
     public String getRandomString(int num) {
         return String.valueOf(randString.charAt(num));
@@ -144,8 +166,8 @@ public class RandomValidateCode {
     /**
      * 检查图片验证码
      *
-     * @param request
-     * @param randomCode
+     * @param request request
+     * @param randomCode randomCode
      * @return
      */
     public boolean checkRandomCode(HttpServletRequest request, String randomCode, String pre) {

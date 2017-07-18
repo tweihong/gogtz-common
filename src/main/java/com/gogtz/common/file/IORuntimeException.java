@@ -5,7 +5,7 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 /**
  * IO运行时异常异常
  *
- * @author xiaoleilu
+ * @author t
  */
 public class IORuntimeException extends RuntimeException {
     private static final long serialVersionUID = 8247610319171014183L;
